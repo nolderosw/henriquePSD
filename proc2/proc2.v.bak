@@ -1,0 +1,74 @@
+module proc2 (DIN, Resetn, Clock, Run, Done, BusWires);
+	input [8:0] DIN;
+	input Resetn, Clock, Run;
+	output Done;
+	output [8:0] BusWires;
+	parameter T0 = 2'b00, T1 = 2'b01, T2 = 2'b10, T3 = 2'b11;
+	//declaracao de variaveis
+	//reg [9:1] IR; 
+	//reg [9:0] Rin;
+	reg[1:0] Tstep_Q;
+	//reg [1:0] IRin;
+	//reg [7:0] Xreg, Yreg;
+	//assign I = IR[1:3];
+	//dec3to8 decX (IR[4:6], 1'b1, Xreg);
+	//dec3to8 decY (IR[7:9], 1'b1, Yreg);
+	//regn reg_0 (BusWires, Rin[0], Clock, R0);
+	// Controle de estados do FSM
+	always @(posedge Clock)
+		begin
+			case (Tstep_Q)
+				T0: // Os dados são carregados no IR nesse passo
+					if (!Run) 
+						Tstep_Q = T0;
+					else 
+						Tstep_Q = T1;
+				T1: 
+					if (!Run) 
+						Tstep_Q = T0;
+					else 
+						Tstep_Q = T2;
+				T2: 
+					if (!Run) 
+						Tstep_Q = T0;
+					else 
+						Tstep_Q = T3;
+				T3: 
+					Tstep_Q = T0;
+				default:
+					Tstep_Q = T0;
+			endcase
+		end
+	// Controle das saídas da FSM
+	/*
+	always @(Tstep_Q or I or Xreg or Yreg)
+		begin
+		//especifique os valores iniciais
+			case (Tstep_Q)
+				T0: // Armazene DIN no registrador IR no passo 0
+					begin
+						IRin = 1'b1;
+					end
+				/*T1: Defina os sinais do passo 1
+					case (I)
+					endcase;
+				T2: // Defina os sinais do passo 2
+					case (I)
+					endcase;
+				T3: // Defina os sinais do passo 3
+					case (I)
+					endcase; *//*
+			endcase;
+		end
+		
+	// Controle os flip-flops do FSM
+	always @(posedge Clock, negedge Resetn)
+		begin
+		/*
+			if (!Resetn)
+				regn reg_0 (BusWires, Rin[0], Clock, R0);
+				//Instancie outros registradores e o somador/subtrator
+				//definição do barramento
+		*/
+		//end
+endmodule
