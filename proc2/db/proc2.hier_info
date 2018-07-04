@@ -14,16 +14,16 @@ Run => Tstep_Q.DATAB
 Run => Tstep_Q.DATAB
 Run => Tstep_Q.DATAB
 Run => Selector0.IN1
-Done <= <GND>
-BusWires[0] <= BusWires[0].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[1] <= BusWires[1].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[2] <= BusWires[2].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[3] <= BusWires[3].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[4] <= BusWires[4].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[5] <= BusWires[5].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[6] <= BusWires[6].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[7] <= BusWires[7].DB_MAX_OUTPUT_PORT_TYPE
-BusWires[8] <= BusWires[8].DB_MAX_OUTPUT_PORT_TYPE
+Done << <GND>
+BusWires[0] << BusWires[0].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[1] << BusWires[1].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[2] << BusWires[2].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[3] << BusWires[3].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[4] << BusWires[4].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[5] << BusWires[5].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[6] << BusWires[6].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[7] << BusWires[7].DB_MAX_OUTPUT_PORT_TYPE
+BusWires[8] << BusWires[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |proc2|regn:reg_IR

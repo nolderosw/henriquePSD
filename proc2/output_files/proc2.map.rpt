@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proc2
-Tue Jul  3 12:08:36 2018
+Wed Jul  4 12:18:18 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -9,37 +9,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. State Machine - |proc2|Tstep_Q
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |proc2
- 12. Parameter Settings for User Entity Instance: regn:reg_IR
- 13. Parameter Settings for User Entity Instance: regn:reg_0
- 14. Parameter Settings for User Entity Instance: regn:reg_1
- 15. Parameter Settings for User Entity Instance: regn:reg_2
- 16. Parameter Settings for User Entity Instance: regn:reg_3
- 17. Parameter Settings for User Entity Instance: regn:reg_4
- 18. Parameter Settings for User Entity Instance: regn:reg_5
- 19. Parameter Settings for User Entity Instance: regn:reg_6
- 20. Parameter Settings for User Entity Instance: regn:reg_7
- 21. Port Connectivity Checks: "regn:reg_7"
- 22. Port Connectivity Checks: "regn:reg_6"
- 23. Port Connectivity Checks: "regn:reg_5"
- 24. Port Connectivity Checks: "regn:reg_4"
- 25. Port Connectivity Checks: "regn:reg_3"
- 26. Port Connectivity Checks: "regn:reg_2"
- 27. Port Connectivity Checks: "regn:reg_1"
- 28. Port Connectivity Checks: "regn:reg_0"
- 29. Port Connectivity Checks: "dec3to8:decY"
- 30. Port Connectivity Checks: "dec3to8:decX"
- 31. Port Connectivity Checks: "regn:reg_IR"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Messages
 
 
 
@@ -62,27 +32,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jul  3 12:08:36 2018       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                   ; proc2                                       ;
-; Top-level Entity Name           ; proc2                                       ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 22                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Wed Jul  4 12:18:18 2018           ;
+; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name               ; proc2                                       ;
+; Top-level Entity Name       ; proc2                                       ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -172,436 +137,45 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; proc2.v                          ; yes             ; User Verilog HDL File  ; /home/wesley/projetos_quartus/proc2/proc2.v   ;         ;
-; dec3to8.v                        ; yes             ; User Verilog HDL File  ; /home/wesley/projetos_quartus/proc2/dec3to8.v ;         ;
-; regn.v                           ; yes             ; User Verilog HDL File  ; /home/wesley/projetos_quartus/proc2/regn.v    ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-
-
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimate of Logic utilization (ALMs needed) ; 0      ;
-;                                             ;        ;
-; Combinational ALUT usage for logic          ; 0      ;
-;     -- 7 input functions                    ; 0      ;
-;     -- 6 input functions                    ; 0      ;
-;     -- 5 input functions                    ; 0      ;
-;     -- 4 input functions                    ; 0      ;
-;     -- <=3 input functions                  ; 0      ;
-;                                             ;        ;
-; Dedicated logic registers                   ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 22     ;
-;                                             ;        ;
-; Total DSP Blocks                            ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; DIN[0] ;
-; Maximum fan-out                             ; 1      ;
-; Total fan-out                               ; 22     ;
-; Average fan-out                             ; 0.50   ;
-+---------------------------------------------+--------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |proc2                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 22   ; 0            ; |proc2              ; proc2       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------+
-; State Machine - |proc2|Tstep_Q                                 ;
-+------------+------------+------------+------------+------------+
-; Name       ; Tstep_Q.T3 ; Tstep_Q.T2 ; Tstep_Q.T1 ; Tstep_Q.T0 ;
-+------------+------------+------------+------------+------------+
-; Tstep_Q.T0 ; 0          ; 0          ; 0          ; 0          ;
-; Tstep_Q.T1 ; 0          ; 0          ; 1          ; 1          ;
-; Tstep_Q.T2 ; 0          ; 1          ; 0          ; 1          ;
-; Tstep_Q.T3 ; 1          ; 0          ; 0          ; 1          ;
-+------------+------------+------------+------------+------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; Tstep_Q~5                             ; Lost fanout        ;
-; Tstep_Q~6                             ; Lost fanout        ;
-; Tstep_Q.T0                            ; Lost fanout        ;
-; Tstep_Q.T1                            ; Lost fanout        ;
-; Tstep_Q.T2                            ; Lost fanout        ;
-; Tstep_Q.T3                            ; Lost fanout        ;
-; Total Number of Removed Registers = 6 ;                    ;
-+---------------------------------------+--------------------+
-
-
-+-----------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                 ;
-+---------------+--------------------+----------------------------------------+
-; Register name ; Reason for Removal ; Registers Removed due to This Register ;
-+---------------+--------------------+----------------------------------------+
-; Tstep_Q~5     ; Lost Fanouts       ; Tstep_Q.T0, Tstep_Q.T2                 ;
-; Tstep_Q~6     ; Lost Fanouts       ; Tstep_Q.T1                             ;
-+---------------+--------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |proc2 ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; T0             ; 00    ; Unsigned Binary                              ;
-; T1             ; 01    ; Unsigned Binary                              ;
-; T2             ; 10    ; Unsigned Binary                              ;
-; T3             ; 11    ; Unsigned Binary                              ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_IR ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; n              ; 9     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_0 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_1 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_2 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_3 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_4 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_5 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_6 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regn:reg_7 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; n              ; 9     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_7"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_6"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_5"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_4"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_3"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_2"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_1"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_0"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dec3to8:decY"                                                                                                        ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; En   ; Input  ; Info     ; Stuck at VCC                                                                                                         ;
-; Y    ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (3 bits) it drives; bit(s) "Y[0..4]" have no fanouts ;
-; Y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dec3to8:decX"                                                                                                        ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; En   ; Input  ; Info     ; Stuck at VCC                                                                                                         ;
-; Y    ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (3 bits) it drives; bit(s) "Y[0..4]" have no fanouts ;
-; Y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_IR"                                                                           ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Rin     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Q[8..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 22                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Jul  3 12:08:08 2018
+    Info: Processing started: Wed Jul  4 12:17:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proc2 -c proc2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
-Info (12021): Found 1 design units, including 1 entities, in source file proc2.v
-    Info (12023): Found entity 1: proc2 File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 1
+Error (10170): Verilog HDL syntax error at proc2.v(37) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 37
+Error (10170): Verilog HDL syntax error at proc2.v(37) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 37
+Error (10170): Verilog HDL syntax error at proc2.v(39) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 39
+Error (10170): Verilog HDL syntax error at proc2.v(41) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 41
+Error (10170): Verilog HDL syntax error at proc2.v(43) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 43
+Error (10170): Verilog HDL syntax error at proc2.v(45) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 45
+Error (10170): Verilog HDL syntax error at proc2.v(47) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 47
+Error (10170): Verilog HDL syntax error at proc2.v(49) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 49
+Error (10170): Verilog HDL syntax error at proc2.v(51) near text: ")";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 51
+Error (10170): Verilog HDL syntax error at proc2.v(95) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 95
+Error (10170): Verilog HDL syntax error at proc2.v(96) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 96
+Error (10170): Verilog HDL syntax error at proc2.v(97) near text: "endcase";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 97
+Error (10170): Verilog HDL syntax error at proc2.v(103) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 103
+Error (10170): Verilog HDL syntax error at proc2.v(104) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 104
+Error (10170): Verilog HDL syntax error at proc2.v(105) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 105
+Error (10170): Verilog HDL syntax error at proc2.v(106) near text: "endcase";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 106
+Error (10170): Verilog HDL syntax error at proc2.v(112) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 112
+Error (10170): Verilog HDL syntax error at proc2.v(113) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 113
+Error (10170): Verilog HDL syntax error at proc2.v(114) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 114
+Info (12021): Found 0 design units, including 0 entities, in source file proc2.v
 Info (12021): Found 1 design units, including 1 entities, in source file dec3to8.v
     Info (12023): Found entity 1: dec3to8 File: /home/wesley/projetos_quartus/proc2/dec3to8.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file regn.v
-    Info (12023): Found entity 1: regn File: /home/wesley/projetos_quartus/proc2/regn.v Line: 1
-Info (12127): Elaborating entity "proc2" for the top level hierarchy
-Warning (10270): Verilog HDL Case Statement warning at proc2.v(65): incomplete case statement has no default case item File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 65
-Warning (10240): Verilog HDL Always Construct warning at proc2.v(62): inferring latch(es) for variable "IRin", which holds its previous value in one or more paths through the always construct File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 62
-Warning (10034): Output port "Done" at proc2.v(4) has no driver File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 4
-Info (10041): Inferred latch for "IRin" at proc2.v(62) File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 62
-Info (12128): Elaborating entity "regn" for hierarchy "regn:reg_IR" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 24
-Info (12128): Elaborating entity "dec3to8" for hierarchy "dec3to8:decX" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 26
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "BusWires[8]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[7]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[6]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[5]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[4]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[3]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[2]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[1]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[0]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "BusWires[8]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[7]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[6]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[5]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[4]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[3]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[2]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[1]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[0]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "BusWires[8]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[7]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[6]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[5]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[4]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[3]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[2]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[1]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[0]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "BusWires[8]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[7]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[6]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[5]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[4]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[3]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[2]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[1]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (12110): Net "BusWires[0]" is missing source, defaulting to GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Done" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 4
-    Warning (13410): Pin "BusWires[0]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[1]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[2]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[3]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[4]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[5]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[6]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[7]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-    Warning (13410): Pin "BusWires[8]" is stuck at GND File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 5
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "DIN[0]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[1]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[2]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[3]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[4]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[5]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[6]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[7]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "DIN[8]" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 2
-    Warning (15610): No output dependent on input pin "Resetn" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 3
-    Warning (15610): No output dependent on input pin "Run" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 3
-    Warning (15610): No output dependent on input pin "Clock" File: /home/wesley/projetos_quartus/proc2/proc2.v Line: 3
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 996 megabytes
-    Info: Processing ended: Tue Jul  3 12:08:36 2018
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:25
+Error (10170): Verilog HDL syntax error at regn.v(9) near text: "or";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/wesley/projetos_quartus/proc2/regn.v Line: 9
+Error (10112): Ignored design unit "regn" at regn.v(1) due to previous errors File: /home/wesley/projetos_quartus/proc2/regn.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file regn.v
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 21 errors, 1 warning
+    Error: Peak virtual memory: 942 megabytes
+    Error: Processing ended: Wed Jul  4 12:18:18 2018
+    Error: Elapsed time: 00:00:29
+    Error: Total CPU time (on all processors): 00:00:25
 
 

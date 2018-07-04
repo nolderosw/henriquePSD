@@ -1,5 +1,5 @@
 Fitter report for proc2
-Tue Jul  3 12:09:50 2018
+Wed Jul  4 10:51:58 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Jul  3 12:09:50 2018       ;
+; Fitter Status                   ; Successful - Wed Jul  4 10:51:58 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; proc2                                       ;
 ; Top-level Entity Name           ; proc2                                       ;
@@ -1198,16 +1198,16 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 2079 megabytes
-    Info: Processing ended: Tue Jul  3 12:09:51 2018
-    Info: Elapsed time: 00:01:14
-    Info: Total CPU time (on all processors): 00:01:11
+    Info: Peak virtual memory: 2083 megabytes
+    Info: Processing ended: Wed Jul  4 10:51:58 2018
+    Info: Elapsed time: 00:01:31
+    Info: Total CPU time (on all processors): 00:01:19
 
 
