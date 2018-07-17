@@ -11,6 +11,10 @@ module proc2 (DIN, Resetn, Clock, Run, Done, BusWires);
 	wire [0:8] IRout;
 	wire [8:0] Xreg;
 	wire [8:0] Yreg;
+	wire YA;
+	wire YG;
+	wire Areg;
+	wire Greg;
 	wire [8:0] R0;
 	wire [8:0] R1;
 	wire [8:0] R2;
@@ -19,8 +23,12 @@ module proc2 (DIN, Resetn, Clock, Run, Done, BusWires);
 	wire [8:0] R5;
 	wire [8:0] R6;
 	wire [8:0] R7;
+	wire [8:0] A;
+	wire [8:0] G;
 	wire [2:0] I;
 	wire [8:0] RTemp;
+	wire [8:0] RTemp_y;
+	wire [8:0] RTemp_add;
 	reg IRin;
 	regn reg_IR (DIN, IRin, Clock, IRout);
 	assign I = IRout[0:2];
@@ -34,6 +42,8 @@ module proc2 (DIN, Resetn, Clock, Run, Done, BusWires);
 	regn reg_5 (BusWires, Xreg[5], Clock, Yreg[5], R5);
 	regn reg_6 (BusWires, Xreg[6], Clock, Yreg[6], R6);
 	regn reg_7 (BusWires, Xreg[7], Clock, Yreg[7], R7);
+	regn reg_a (BusWires, Areg, Clock, YA, A);
+	regn reg_g (Buswires, Greg, Clock, YG, G);
 	if(Xreg[0])
 		Rtemp = R0;
 	else if(Xreg[1])
@@ -50,6 +60,23 @@ module proc2 (DIN, Resetn, Clock, Run, Done, BusWires);
 		Rtemp = R6;
 	else if(Xreg[7])
 		Rtemp = R7;
+				
+	if(Yreg[0])
+		Rtemp_y = R0;
+	else if(Yreg[1])
+		Rtemp_y = R1;
+	else if(Yreg[2])
+		Rtemp_y = R2;
+	else if(Yreg[3])
+		Rtemp_y = R3;
+	else if(Yreg[4])
+		Rtemp_y = R4;
+	else if(Yreg[5])
+		Rtemp_y = R5;
+	else if(Yreg[6])
+		Rtemp_y = R6;
+	else if(Yreg[7])
+		Rtemp_y = R7;
 	// Controle de estados do FSM
 	always @(posedge Clock)
 		begin
@@ -89,18 +116,25 @@ module proc2 (DIN, Resetn, Clock, Run, Done, BusWires);
 						case(I)
 							3'b000: //mv
 								begin
-									BusWires = Rtemp;
+									BusWires = RTemp;
 								end
 							3'b001: //mvi
-							3'b010: //add
+								begin
+									BusWires = DIN;
+								end
+							3'b010:	//add
+								begin
+									
+								end
 							3'b011: //sub	
+								begin
+									
+								end
 						endcase
 					end
 				T2:
 					begin
 						case(I)
-							3'b000: //mv
-							3'b001: //mvi
 							3'b010: //add
 							3'b011: //sub	
 						endcase
@@ -108,10 +142,8 @@ module proc2 (DIN, Resetn, Clock, Run, Done, BusWires);
 				T3:
 					begin
 						case(I)
-							3'b000: //mv
-							3'b001: //mvi
 							3'b010: //add
-							3'b011: //sub	
+							3'b011: //sub
 						endcase
 					end
 					
