@@ -93,10 +93,12 @@ module proc3(DIN, Resetn, Clock, Run, Done, BusWires);
 		endcase
 	end	
 	always @(posedge Clock, negedge Resetn)
-		if (!Resetn)
-			Tstep_Q <= T0;
-		else
-			Tstep_Q <= Tstep_D;
+		begin
+			if (!Resetn)
+				Tstep_Q <= T0;
+			else
+				Tstep_Q <= Tstep_D;
+		end
 	regn reg_0 (BusWires, Rin[0], Clock, R0);
 	regn reg_1 (BusWires, Rin[1], Clock, R1);
 	regn reg_2 (BusWires, Rin[2], Clock, R2);
@@ -106,7 +108,6 @@ module proc3(DIN, Resetn, Clock, Run, Done, BusWires);
 	regn reg_6 (BusWires, Rin[6], Clock, R6);
 	regn reg_7 (BusWires, Rin[7], Clock, R7);
 	regn reg_A (BusWires, Ain, Clock, A);
-	regn #(.n(9)) reg_IR (DIN[8:0], IRin, Clock, IR);
 	always @(AddSub or A or BusWires)
 		begin
 		if (!AddSub)
